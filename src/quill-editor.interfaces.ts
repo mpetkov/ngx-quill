@@ -40,7 +40,7 @@ export interface QuillModules {
 export interface QuillConfig {
   bounds?: HTMLElement | string
   debug?: 'error' | 'warn' | 'log' | false
-  formats?: any
+  registry?: any
   modules?: QuillModules
   placeholder?: string
   readOnly?: boolean

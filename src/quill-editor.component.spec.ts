@@ -864,7 +864,6 @@ describe('QuillEditor - base config', () => {
       imports: [FormsModule, QuillModule.forRoot({
         bounds: 'body',
         debug: false,
-        formats: ['bold'],
         modules: {
           toolbar: [
             ['bold']
@@ -872,6 +871,7 @@ describe('QuillEditor - base config', () => {
         },
         placeholder: 'placeholder',
         readOnly: true,
+        registry: ['bold'],
         scrollingContainer: null,
         theme: 'snow',
         trackChanges: 'all'

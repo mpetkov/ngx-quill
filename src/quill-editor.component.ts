@@ -84,7 +84,7 @@ export class QuillEditorComponent
   @Input() maxLength?: number
   @Input() minLength?: number
   @Input() required: boolean = false
-  @Input() formats?: string[] | null
+  @Input() registry?: string[] | null
   @Input() customToolbarPosition: 'top' | 'bottom' = 'top'
   @Input() sanitize: boolean = false
   @Input() style: any = null
@@ -240,18 +240,18 @@ export class QuillEditorComponent
       scrollingContainer = this.config.scrollingContainer === null || this.config.scrollingContainer ? this.config.scrollingContainer : null
     }
 
-    let formats = this.formats
-    if (!formats && formats !== undefined) {
-      formats = this.config.formats || this.config.formats === null ? this.config.formats : []
+    let registry = this.registry
+    if (!registry && registry !== undefined) {
+      registry = this.config.registry || this.config.registry === null ? this.config.registry : []
     }
 
     this.quillEditor = new Quill(this.editorElem, {
       bounds,
       debug,
-      formats,
       modules,
       placeholder,
       readOnly,
+      registry,
       scrollingContainer,
       strict: this.strict,
       theme: this.theme || (this.config.theme ? this.config.theme : 'snow')
