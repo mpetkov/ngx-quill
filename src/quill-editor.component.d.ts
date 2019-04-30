@@ -47,7 +47,7 @@ export declare class QuillEditorComponent implements AfterViewInit, ControlValue
     minLength: number;
     required: boolean;
     formats: string[];
-    style: any;
+    styles: any;
     strict: boolean;
     scrollingContainer: HTMLElement | string;
     bounds: HTMLElement | string;

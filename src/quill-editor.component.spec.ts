@@ -9,7 +9,7 @@ let Quill: any = QuillNamespace;
 
 @Component({
   template: `
-<quill-editor [(ngModel)]="title" [customOptions]="[{import: 'attributors/style/size', whitelist: ['14']}]" [style]="{height: '30px'}" [required]="required" [minLength]="minLength" [maxLength]="maxLength" [readOnly]="isReadOnly" (onEditorCreated)="handleEditorCreated($event)" (onContentChanged)="handleChange($event);" (onSelectionChanged)="handleSelection($event);"></quill-editor>
+<quill-editor [(ngModel)]="title" [customOptions]="[{import: 'attributors/style/size', whitelist: ['14']}]" [styles]="{height: '30px'}" [required]="required" [minLength]="minLength" [maxLength]="maxLength" [readOnly]="isReadOnly" (onEditorCreated)="handleEditorCreated($event)" (onContentChanged)="handleChange($event);" (onSelectionChanged)="handleSelection($event);"></quill-editor>
 `
 })
 class TestComponent {
